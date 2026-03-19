@@ -1,0 +1,12 @@
+opencollection: 1.0.0
+info:
+  name: "Let It Cook"
+  type: workspace
+
+collections:
+  - name: "core-api"
+    path: "collections/core-api"
+
+specs:
+
+docs: ''
