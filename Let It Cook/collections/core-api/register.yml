@@ -5,10 +5,15 @@ info:
 
 http:
   method: POST
-  url: hi
+  url: http://localhost:8080/core-api/account/register
   body:
     type: json
-    data: "{}"
+    data: |-
+      {
+        "email": "basil.kitana18@gmail.com",
+        "password": "12345678",
+        "displayName": "basil"
+      }
   auth: inherit
 
 settings:
