@@ -1,0 +1,33 @@
+info:
+  name: Complete Onboarding
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: http://localhost:8080/core-api/account/onboarding
+  body:
+    type: json
+    data: |-
+      {
+        "age": 25,
+        "skillLevel": "INTERMEDIATE",
+        "weight": 70.0,
+        "height": 175.0,
+        "fitnessGoal": "MAINTAIN",
+        "allergies": ["Peanuts"],
+        "dietaryPreferences": ["VEGETARIAN"],
+        "macrosGoal": {
+          "calories": 2000,
+          "proteinGrams": 150,
+          "carbsGrams": 200,
+          "fatGrams": 70
+        }
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

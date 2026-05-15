@@ -1,18 +1,17 @@
 info:
-  name: register
+  name: Replace Equipment
   type: http
-  seq: 1
+  seq: 5
 
 http:
   method: POST
-  url: http://localhost:8080/core-api/account/register
+  url: http://localhost:8080/core-api/recipe/{id}/replace-equipment
   body:
     type: json
     data: |-
       {
-        "email": "basil.kitana19@gmail.com",
-        "password": "12345678",
-        "username": "basil"
+        "recipeId": "{id}",
+        "missingEquipment": "Oven"
       }
   auth: inherit
 

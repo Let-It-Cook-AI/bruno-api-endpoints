@@ -1,0 +1,35 @@
+info:
+  name: Generate Recipe
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:8080/core-api/recipe/generate
+  body:
+    type: json
+    data: |-
+      {
+        "usePantry": true,
+        "strictMode": false,
+        "activeTimeMins": 30,
+        "passiveTimeMins": 15,
+        "servings": 2,
+        "vibe": ["comfort food"],
+        "ingredients": [],
+        "extraNotes": "Make it spicy",
+        "macrosGoal": {
+          "calories": 600,
+          "proteinGrams": 30,
+          "carbsGrams": 50,
+          "fatGrams": 20
+        },
+        "effortLevel": "MEDIUM"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

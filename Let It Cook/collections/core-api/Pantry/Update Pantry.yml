@@ -1,0 +1,32 @@
+info:
+  name: Update Pantry
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: http://localhost:8080/core-api/pantry
+  body:
+    type: json
+    data: |-
+      {
+        "ingredients": [
+          {
+            "name": "Eggs",
+            "quantity": 12.0,
+            "unit": "pieces"
+          },
+          {
+            "name": "Milk",
+            "quantity": 1.0,
+            "unit": "liter"
+          }
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

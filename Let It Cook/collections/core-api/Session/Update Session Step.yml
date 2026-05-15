@@ -1,0 +1,21 @@
+info:
+  name: Update Session Step
+  type: http
+  seq: 2
+
+http:
+  method: PUT
+  url: http://localhost:8080/core-api/session/{id}/step
+  body:
+    type: json
+    data: |-
+      {
+        "stepNumber": 2
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

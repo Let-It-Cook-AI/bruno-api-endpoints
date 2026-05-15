@@ -1,0 +1,31 @@
+info:
+  name: Create Recipe
+  type: http
+  seq: 10
+
+http:
+  method: POST
+  url: http://localhost:8080/core-api/recipe
+  body:
+    type: json
+    data: |-
+      {
+        "title": "My Custom Recipe",
+        "ingredients": [
+          {
+            "name": "Bread",
+            "quantity": 2.0,
+            "unit": "slices"
+          }
+        ],
+        "steps": [
+          "Toast the bread"
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

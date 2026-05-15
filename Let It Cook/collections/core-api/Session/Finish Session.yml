@@ -1,0 +1,22 @@
+info:
+  name: Finish Session
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: http://localhost:8080/core-api/session/{id}/finish
+  body:
+    type: json
+    data: |-
+      {
+        "photoUrl": "http://example.com/food.jpg",
+        "rating": 5
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

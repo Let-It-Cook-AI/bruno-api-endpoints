@@ -1,0 +1,31 @@
+info:
+  name: Update Profile
+  type: http
+  seq: 8
+
+http:
+  method: PUT
+  url: http://localhost:8080/core-api/account/profile
+  body:
+    type: json
+    data: |-
+      {
+        "username": "johndoe_updated",
+        "age": 26,
+        "skillLevel": "ADVANCED",
+        "allergies": ["Peanuts", "Shellfish"],
+        "dietaryPreferences": ["VEGAN"],
+        "macrosGoal": {
+          "calories": 2200,
+          "proteinGrams": 160,
+          "carbsGrams": 220,
+          "fatGrams": 75
+        }
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

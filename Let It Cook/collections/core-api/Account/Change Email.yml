@@ -10,12 +10,9 @@ http:
     type: json
     data: |-
       {
-        "currentEmail": "basil@gmail.com",
-        "newEmail": "basil1@gmail.com"
+        "newEmail": "newuser@example.com"
       }
-  auth:
-    type: bearer
-    token: ""
+  auth: inherit
 
 settings:
   encodeUrl: true

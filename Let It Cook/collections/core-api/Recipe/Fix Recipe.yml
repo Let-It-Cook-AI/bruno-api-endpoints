@@ -1,0 +1,23 @@
+info:
+  name: Fix Recipe
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: http://localhost:8080/core-api/recipe/{id}/fix
+  body:
+    type: json
+    data: |-
+      {
+        "recipeId": "{id}",
+        "problemDescription": "Too salty",
+        "currentStep": 3
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

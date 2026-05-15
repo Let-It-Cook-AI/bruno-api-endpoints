@@ -1,0 +1,21 @@
+info:
+  name: Start Session
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:8080/core-api/session/start
+  body:
+    type: json
+    data: |-
+      {
+        "recipeId": "recipe_123"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
