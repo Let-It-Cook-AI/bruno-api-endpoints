@@ -11,8 +11,7 @@ http:
     data: |-
       {
         "dishRequest": "Pasta Carbonara",
-        "activeTimeMins": 20,
-        "passiveTimeMins": 0,
+        "totalTimeMins": 20,
         "servings": 2,
         "vibe": ["Italian"],
         "ingredients": [],

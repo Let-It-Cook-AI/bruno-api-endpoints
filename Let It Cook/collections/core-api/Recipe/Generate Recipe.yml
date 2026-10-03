@@ -12,8 +12,7 @@ http:
       {
         "usePantry": true,
         "strictMode": false,
-        "activeTimeMins": 30,
-        "passiveTimeMins": 15,
+        "totalTimeMins": 45,
         "servings": 2,
         "vibe": ["comfort food"],
         "ingredients": [],
