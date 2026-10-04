@@ -1,0 +1,19 @@
+info:
+  name: Delete Recipe
+  type: http
+  seq: 25
+
+http:
+  method: DELETE
+  url: "{{baseUrl}}/core-api/recipe/{{recipeId}}"
+  body:
+    type: none
+  auth:
+    type: bearer
+    token: "{{idToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
