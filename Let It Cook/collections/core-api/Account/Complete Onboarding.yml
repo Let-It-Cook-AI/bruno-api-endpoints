@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: http://localhost:8080/core-api/account/onboarding
+  url: "{{baseUrl}}/core-api/account/onboarding"
   body:
     type: json
     data: |-
@@ -24,7 +24,9 @@ http:
           "fatGrams": 70
         }
       }
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{idToken}}"
 
 settings:
   encodeUrl: true

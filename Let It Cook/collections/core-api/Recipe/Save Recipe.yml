@@ -5,10 +5,12 @@ info:
 
 http:
   method: POST
-  url: http://localhost:8080/core-api/recipe/{id}/save
+  url: "{{baseUrl}}/core-api/recipe/{{recipeId}}/save"
   body:
     type: none
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{idToken}}"
 
 settings:
   encodeUrl: true

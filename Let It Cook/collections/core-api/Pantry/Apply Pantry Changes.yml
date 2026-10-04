@@ -1,0 +1,27 @@
+info:
+  name: Apply Pantry Changes
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{baseUrl}}/core-api/pantry/ops"
+  body:
+    type: json
+    data: |-
+      {
+        "operations": [
+          { "type": "ADD", "name": "Eggs", "unit": "PIECES", "quantity": 12 },
+          { "type": "ADD_STAPLE", "name": "Olive oil" },
+          { "type": "FINISH", "names": ["Milk"] }
+        ]
+      }
+  auth:
+    type: bearer
+    token: "{{idToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

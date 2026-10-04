@@ -1,18 +1,20 @@
 info:
-  name: Invite Sous Chef
+  name: Rate Recipe
   type: http
-  seq: 4
+  seq: 20
 
 http:
   method: POST
-  url: http://localhost:8080/core-api/session/{id}/invite
+  url: "{{baseUrl}}/core-api/recipe/{{recipeId}}/rate"
   body:
     type: json
     data: |-
       {
-        "guestUserId": "guest_456"
+        "rating": 5
       }
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{idToken}}"
 
 settings:
   encodeUrl: true

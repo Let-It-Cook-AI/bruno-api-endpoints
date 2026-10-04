@@ -5,14 +5,16 @@ info:
 
 http:
   method: PUT
-  url: http://localhost:8080/core-api/account/email
+  url: "{{baseUrl}}/core-api/account/email"
   body:
     type: json
     data: |-
       {
         "newEmail": "newuser@example.com"
       }
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{idToken}}"
 
 settings:
   encodeUrl: true

@@ -1,18 +1,19 @@
 info:
-  name: Smart Replace
+  name: Stream Recipe
   type: http
-  seq: 4
+  seq: 22
 
 http:
   method: POST
-  url: "{{baseUrl}}/core-api/recipe/{{recipeId}}/smart-replace"
+  url: "{{baseUrl}}/core-api/recipe/generate/stream"
   body:
     type: json
     data: |-
       {
-        "targetIngredient": "Chicken",
-        "userPrompt": "I want a vegan alternative",
-        "substitute": "Tofu"
+        "usePantry": true,
+        "effortLevel": "MEDIUM",
+        "servings": 2,
+        "requestId": "{{$randomUUID}}"
       }
   auth:
     type: bearer

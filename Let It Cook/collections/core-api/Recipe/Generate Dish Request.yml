@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: http://localhost:8080/core-api/recipe/dish-request/generate
+  url: "{{baseUrl}}/core-api/recipe/dish-request/generate"
   body:
     type: json
     data: |-
@@ -24,7 +24,9 @@ http:
         },
         "effortLevel": "MEDIUM"
       }
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{idToken}}"
 
 settings:
   encodeUrl: true

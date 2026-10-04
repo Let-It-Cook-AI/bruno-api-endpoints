@@ -1,0 +1,29 @@
+info:
+  name: Sign In
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key={{firebaseApiKey}}
+  body:
+    type: json
+    data: |-
+      {
+        "email": "{{email}}",
+        "password": "{{password}}",
+        "returnSecureToken": true
+      }
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        // Every core-api request sends this token (it expires after an hour: sign in again)
+        bru.setEnvVar("idToken", res.body.idToken);
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -5,10 +5,12 @@ info:
 
 http:
   method: GET
-  url: http://localhost:8080/core-api/pantry
+  url: "{{baseUrl}}/core-api/pantry"
   body:
     type: none
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{idToken}}"
 
 settings:
   encodeUrl: true

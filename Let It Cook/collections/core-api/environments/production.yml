@@ -1,0 +1,14 @@
+name: production
+variables:
+  - name: baseUrl
+    value: https://core-api-1006850334612.europe-west4.run.app
+  - name: recipeId
+    value: ""
+  - name: firebaseApiKey
+    secret: true
+  - name: email
+    secret: true
+  - name: password
+    secret: true
+  - name: idToken
+    secret: true

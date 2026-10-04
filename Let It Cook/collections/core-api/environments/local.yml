@@ -1,0 +1,14 @@
+name: local
+variables:
+  - name: baseUrl
+    value: http://localhost:8080
+  - name: recipeId
+    value: ""
+  - name: firebaseApiKey
+    secret: true
+  - name: email
+    secret: true
+  - name: password
+    secret: true
+  - name: idToken
+    secret: true

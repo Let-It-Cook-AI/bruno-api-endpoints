@@ -5,14 +5,14 @@ info:
 
 http:
   method: PUT
-  url: http://localhost:8080/core-api/account/profile
+  url: "{{baseUrl}}/core-api/account/profile"
   body:
     type: json
     data: |-
       {
         "username": "johndoe_updated",
         "age": 26,
-        "skillLevel": "ADVANCED",
+        "skillLevel": "MASTER",
         "allergies": ["Peanuts", "Shellfish"],
         "dietaryPreferences": ["VEGAN"],
         "macrosGoal": {
@@ -22,7 +22,9 @@ http:
           "fatGrams": 75
         }
       }
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{idToken}}"
 
 settings:
   encodeUrl: true

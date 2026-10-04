@@ -1,18 +1,18 @@
 info:
-  name: Smart Replace
+  name: Stream Dish Request
   type: http
-  seq: 4
+  seq: 23
 
 http:
   method: POST
-  url: "{{baseUrl}}/core-api/recipe/{{recipeId}}/smart-replace"
+  url: "{{baseUrl}}/core-api/recipe/dish-request/generate/stream"
   body:
     type: json
     data: |-
       {
-        "targetIngredient": "Chicken",
-        "userPrompt": "I want a vegan alternative",
-        "substitute": "Tofu"
+        "dishRequest": "Pasta Carbonara",
+        "effortLevel": "MEDIUM",
+        "requestId": "{{$randomUUID}}"
       }
   auth:
     type: bearer

@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: http://localhost:8080/core-api/pantry
+  url: "{{baseUrl}}/core-api/pantry"
   body:
     type: json
     data: |-
@@ -14,16 +14,18 @@ http:
           {
             "name": "Eggs",
             "quantity": 12.0,
-            "unit": "pieces"
+            "unit": "PIECES"
           },
           {
             "name": "Milk",
             "quantity": 1.0,
-            "unit": "liter"
+            "unit": "LITERS"
           }
         ]
       }
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{idToken}}"
 
 settings:
   encodeUrl: true
