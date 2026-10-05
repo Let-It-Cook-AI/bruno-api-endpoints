@@ -1,0 +1,23 @@
+info:
+  name: Update Banner
+  type: http
+  seq: 26
+
+http:
+  method: POST
+  url: "{{baseUrl}}/core-api/recipe/{{recipeId}}/banner"
+  body:
+    type: json
+    data: |-
+      {
+        "imageUrl": "https://example.com/banner.jpg"
+      }
+  auth:
+    type: bearer
+    token: "{{idToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

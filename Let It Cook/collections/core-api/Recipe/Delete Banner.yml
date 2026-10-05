@@ -1,0 +1,19 @@
+info:
+  name: Delete Banner
+  type: http
+  seq: 27
+
+http:
+  method: DELETE
+  url: "{{baseUrl}}/core-api/recipe/{{recipeId}}/banner"
+  body:
+    type: none
+  auth:
+    type: bearer
+    token: "{{idToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
