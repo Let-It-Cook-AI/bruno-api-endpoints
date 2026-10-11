@@ -1,0 +1,23 @@
+info:
+  name: Rename Recipe
+  type: http
+  seq: 28
+
+http:
+  method: POST
+  url: "{{baseUrl}}/core-api/recipe/{{recipeId}}/rename"
+  body:
+    type: json
+    data: |-
+      {
+        "title": "Sunday tomato soup"
+      }
+  auth:
+    type: bearer
+    token: "{{idToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
