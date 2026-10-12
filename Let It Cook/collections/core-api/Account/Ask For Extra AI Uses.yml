@@ -1,0 +1,19 @@
+info:
+  name: Ask For Extra AI Uses
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{baseUrl}}/core-api/account/ai-limits/extra"
+  body:
+    type: none
+  auth:
+    type: bearer
+    token: "{{idToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

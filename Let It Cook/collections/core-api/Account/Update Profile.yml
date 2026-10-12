@@ -20,7 +20,8 @@ http:
           "proteinGrams": 160,
           "carbsGrams": 220,
           "fatGrams": 75
-        }
+        },
+        "tester": false
       }
   auth:
     type: bearer
