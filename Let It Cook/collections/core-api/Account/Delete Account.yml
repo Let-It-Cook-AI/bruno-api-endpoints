@@ -1,0 +1,19 @@
+info:
+  name: Delete Account
+  type: http
+  seq: 10
+
+http:
+  method: DELETE
+  url: "{{baseUrl}}/core-api/account"
+  body:
+    type: none
+  auth:
+    type: bearer
+    token: "{{idToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

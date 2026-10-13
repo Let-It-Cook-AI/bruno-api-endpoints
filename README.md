@@ -20,3 +20,5 @@ Register, Reset Password and Confirm Password Reset are public and send no token
 - The streaming requests (`Stream …`) answer with Server-Sent Events; Bruno shows the raw event
   stream once it ends. Each sends a fresh `requestId`, as the app does.
 - AI requests count toward the account's daily limit (50 by default).
+- **Account / Delete Account** deletes the signed-in account and everything in it for good. Use a
+  throwaway account, and run **Auth / Sign In** first: it needs a sign-in from the last 5 minutes.
