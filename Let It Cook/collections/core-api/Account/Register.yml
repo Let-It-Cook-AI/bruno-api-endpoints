@@ -11,8 +11,9 @@ http:
     data: |-
       {
         "email": "user@example.com",
-        "password": "password123",
-        "username": "johndoe"
+        "password": "Passw0rd123",
+        "username": "johndoe",
+        "dataConsent": true
       }
 
 settings:

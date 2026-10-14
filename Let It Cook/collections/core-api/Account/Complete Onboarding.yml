@@ -12,17 +12,8 @@ http:
       {
         "age": 25,
         "skillLevel": "INTERMEDIATE",
-        "weight": 70.0,
-        "height": 175.0,
-        "fitnessGoal": "MAINTAIN",
         "allergies": ["Peanuts"],
-        "dietaryPreferences": ["VEGETARIAN"],
-        "macrosGoal": {
-          "calories": 2000,
-          "proteinGrams": 150,
-          "carbsGrams": 200,
-          "fatGrams": 70
-        }
+        "dietaryPreferences": ["VEGETARIAN"]
       }
   auth:
     type: bearer

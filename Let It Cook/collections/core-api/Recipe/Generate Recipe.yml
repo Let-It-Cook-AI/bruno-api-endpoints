@@ -17,12 +17,6 @@ http:
         "vibe": ["comfort food"],
         "ingredients": [],
         "extraNotes": "Make it spicy",
-        "macrosGoal": {
-          "calories": 600,
-          "proteinGrams": 30,
-          "carbsGrams": 50,
-          "fatGrams": 20
-        },
         "effortLevel": "MEDIUM"
       }
   auth:

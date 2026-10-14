@@ -15,12 +15,6 @@ http:
         "skillLevel": "MASTER",
         "allergies": ["Peanuts", "Shellfish"],
         "dietaryPreferences": ["VEGAN"],
-        "macrosGoal": {
-          "calories": 2200,
-          "proteinGrams": 160,
-          "carbsGrams": 220,
-          "fatGrams": 75
-        },
         "tester": false
       }
   auth:

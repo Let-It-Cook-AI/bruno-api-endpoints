@@ -16,12 +16,6 @@ http:
         "vibe": ["Italian"],
         "ingredients": [],
         "extraNotes": "Traditional style",
-        "macrosGoal": {
-          "calories": 700,
-          "proteinGrams": 25,
-          "carbsGrams": 60,
-          "fatGrams": 30
-        },
         "effortLevel": "MEDIUM"
       }
   auth:
