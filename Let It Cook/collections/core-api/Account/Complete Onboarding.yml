@@ -10,7 +10,6 @@ http:
     type: json
     data: |-
       {
-        "age": 25,
         "skillLevel": "INTERMEDIATE",
         "allergies": ["Peanuts"],
         "dietaryPreferences": ["VEGETARIAN"]
