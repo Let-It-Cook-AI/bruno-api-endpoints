@@ -1,0 +1,23 @@
+info:
+  name: Parse Speech
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{baseUrl}}/core-api/pantry/parse-speech"
+  body:
+    type: json
+    data: |-
+      {
+        "transcript": "two dozen eggs some fresh time and a bag of flower\noh and oat milk not the regular milk"
+      }
+  auth:
+    type: bearer
+    token: "{{idToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

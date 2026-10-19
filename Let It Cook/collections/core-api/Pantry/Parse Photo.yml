@@ -1,0 +1,27 @@
+info:
+  name: Parse Photo
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{baseUrl}}/core-api/pantry/parse-photo"
+  body:
+    type: json
+    # Replace image with a real photo's base64 (base64 -w0 receipt.jpg). This tiny placeholder
+    # is a blank picture, which the AI answers with status ERROR.
+    data: |-
+      {
+        "kind": "RECEIPT",
+        "image": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/wAALCAABAAEBAREA/8QAFAABAAAAAAAAAAAAAAAAAAAACf/EABQQAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQEAAD8AKp//2Q==",
+        "mimeType": "image/jpeg"
+      }
+  auth:
+    type: bearer
+    token: "{{idToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
