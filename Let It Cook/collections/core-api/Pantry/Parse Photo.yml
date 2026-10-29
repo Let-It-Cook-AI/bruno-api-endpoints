@@ -5,17 +5,19 @@ info:
 
 http:
   method: POST
-  url: "{{baseUrl}}/core-api/pantry/parse-photo"
+  # kind is RECEIPT or SHELF. The body is the photo itself (JPEG, PNG or HEIC, at most 2 MB);
+  # core-api reads its type from its bytes, so anything else is refused with 415.
+  url: "{{baseUrl}}/core-api/pantry/parse-photo?kind=RECEIPT"
+  headers:
+    - name: Content-Type
+      value: image/jpeg
   body:
-    type: json
-    # Replace image with a real photo's base64 (base64 -w0 receipt.jpg). This tiny placeholder
-    # is a blank picture, which the AI answers with status ERROR.
-    data: |-
-      {
-        "kind": "RECEIPT",
-        "image": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/wAALCAABAAEBAREA/8QAFAABAAAAAAAAAAAAAAAAAAAACf/EABQQAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQEAAD8AKp//2Q==",
-        "mimeType": "image/jpeg"
-      }
+    type: file
+    # Pick a photo of a receipt or a shelf on your machine.
+    data:
+      - filePath: receipt.jpg
+        contentType: image/jpeg
+        selected: true
   auth:
     type: bearer
     token: "{{idToken}}"
