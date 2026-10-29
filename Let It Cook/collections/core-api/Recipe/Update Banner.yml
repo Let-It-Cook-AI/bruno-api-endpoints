@@ -8,9 +8,11 @@ http:
   url: "{{baseUrl}}/core-api/recipe/{{recipeId}}/banner"
   body:
     type: json
+    # Upload the photo to Firebase Storage first, under recipe_banners/<your uid>/; core-api
+    # builds the banner's URL from its path and refuses any other folder.
     data: |-
       {
-        "imageUrl": "https://example.com/banner.jpg"
+        "path": "recipe_banners/YOUR_UID/recipe-1730000000000.jpg"
       }
   auth:
     type: bearer
