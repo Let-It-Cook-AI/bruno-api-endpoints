@@ -36,3 +36,7 @@ same change, along with the app's DTOs. After editing, check that every file sti
 ```bash
 python -c "import pathlib, yaml; [yaml.safe_load(p.read_text(encoding='utf-8')) for p in pathlib.Path('Let It Cook').rglob('*.yml')]"
 ```
+
+core-api's `CoreApiApplicationTests` checks these requests against its OpenAPI spec
+(`core-api/openapi.json`): every request must be an endpoint there, and every endpoint needs a
+request. Its CI checks out this repository for that.
