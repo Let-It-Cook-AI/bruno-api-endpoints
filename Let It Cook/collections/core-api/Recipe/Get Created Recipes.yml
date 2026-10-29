@@ -5,7 +5,8 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}/core-api/recipe/created"
+  # A page of summaries, newest first. For the next page add &cursor= with the reply's nextCursor.
+  url: "{{baseUrl}}/core-api/recipe/created?limit=25"
   body:
     type: none
   auth:
