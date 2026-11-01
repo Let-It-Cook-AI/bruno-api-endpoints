@@ -1,0 +1,22 @@
+info:
+  name: Register With Google or Apple
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{baseUrl}}/core-api/account/register/social"
+  body:
+    type: json
+    data: |-
+      {
+        "provider": "GOOGLE",
+        "idToken": "the ID token from Google's or Apple's sign-in on a phone",
+        "dataConsent": true
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

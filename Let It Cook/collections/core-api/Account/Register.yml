@@ -12,7 +12,6 @@ http:
       {
         "email": "user@example.com",
         "password": "Passw0rd123",
-        "username": "johndoe",
         "dataConsent": true
       }
 
